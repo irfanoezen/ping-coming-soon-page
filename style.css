@@ -250,25 +250,26 @@ a {
   margin-block-end: 24px;
 }
 
-a:hover {
-  cursor: pointer;
-  background-color: var(--blue-500);
-
-  .social-links-container a svg > rect {
-    fill: var(--blue-500);
-  }
-
-  .social-links-container a svg g rect {
-    fill: #fff;
-  }
-}
-
 .social-links-container a svg > rect {
   fill: #fff;
 }
 
 .social-links-container a svg g rect {
   fill: var(--blue-500);
+}
+
+.social-links-container a:hover {
+  cursor: pointer;
+  background-color: var(--blue-500);
+  border-color: var(--blue-500);
+}
+
+.social-links-container a:hover svg > rect {
+  fill: var(--blue-500);
+}
+
+.social-links-container a:hover svg g rect {
+  fill: #fff;
 }
 
 .content-info {
