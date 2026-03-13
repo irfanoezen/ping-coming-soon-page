@@ -278,3 +278,35 @@ a {
   line-height: 1.25;
   color: var(--gray-400);
 }
+
+@media screen and (min-width: 768px) {
+  main {
+    padding: 87px 64px 47px 64px;
+  }
+
+  .logo {
+    margin-block-end: 48px;
+  }
+
+  .heading {
+    font-size: 48px;
+    margin-block-end: 16px;
+  }
+
+  .text {
+    font-size: 20px;
+  }
+
+  form {
+    grid-template-columns: auto 200px;
+    column-gap: 16px;
+    width: 100%;
+    font-size: 16px;
+    margin-block-end: 96px;
+  }
+
+  input[type="text"] {
+    padding-block: 18px;
+    padding-inline-start: 32px;
+  }
+}
