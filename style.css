@@ -207,7 +207,7 @@ input[type="text"] {
   border-radius: 28px;
   padding-block: 12.5px;
   padding-inline-start: 24px;
-  color: var(--blue-250);
+  color: var(--blue-500);
 }
 
 input[type="text"]:focus {
@@ -253,6 +253,14 @@ a {
 a:hover {
   cursor: pointer;
   background-color: var(--blue-500);
+
+  .social-links-container a svg > rect {
+    fill: var(--blue-500);
+  }
+
+  .social-links-container a svg g rect {
+    fill: #fff;
+  }
 }
 
 .social-links-container a svg > rect {
