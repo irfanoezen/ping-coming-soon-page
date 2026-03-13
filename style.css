@@ -310,3 +310,9 @@ a {
     padding-inline-start: 32px;
   }
 }
+
+@media screen and (min-width: 1440px) {
+  main {
+    padding: 87px 400px 47px 400px;
+  }
+}
