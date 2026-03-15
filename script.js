@@ -1,19 +1,22 @@
 "use strict";
 
-const submitBtn = document.querySelector("#submit-btn");
+const form = document.querySelector("form");
 const input = document.querySelector("#input-field");
+
 const errorMessage = document.createElement("p");
+errorMessage.textContent = "Please provide a valid email address";
+
+form.addEventListener("submit", (event) => {
+  if (input.validity.valueMissing || input.validity.typeMismatch || input.validity.patternMismatch) {
+    input.after(errorMessage);
+  }
+  event.preventDefault();
+});
 
 input.addEventListener("input", (event) => {
-  if (input.validity.valueMissing) {
-    errorMessage.textContent = "Please provide an email address";
+  if (input.validity.valueMissing || input.validity.typeMismatch || input.validity.patternMismatch) {
     event.target.after(errorMessage);
-  } else if (input.validity.typeMismatch || input.validity.patternMismatch) {
-    errorMessage.textContent = "Please provide a valid email address";
-    event.target.after(errorMessage);
-  } else {
-    if(event.target.nextElementSibling.tagName === "P") {
-      event.target.nextElementSibling.remove();
-    }
+  } else if (event.target.nextElementSibling.tagName === "P") {
+    event.target.nextElementSibling.remove();
   }
 });
