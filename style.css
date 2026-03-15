@@ -208,6 +208,7 @@ input[type="email"] {
   padding-block: 12.5px;
   padding-inline-start: 24px;
   color: var(--blue-500);
+  width: 100%;
 }
 
 input[type="email"]:focus {
@@ -284,6 +285,7 @@ a {
   font-style: italic;
   line-height: 1.25;
   color: var(--red-400);
+  padding-block-start: 8px;
 }
 
 @media screen and (min-width: 768px) {
@@ -306,6 +308,7 @@ a {
 
   form {
     grid-template-columns: auto 200px;
+    grid-template-rows: auto auto;
     column-gap: 16px;
     width: 100%;
     font-size: 16px;
@@ -314,6 +317,17 @@ a {
 
   input[type="text"] {
     padding-block: 18px;
+    padding-inline-start: 32px;
+  }
+
+  .input-container {
+    grid-row: span 2;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .error-message {
+    align-self: start;
     padding-inline-start: 32px;
   }
 }
